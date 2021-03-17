@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Movie</string>
+    <string name="hello_world">Hello World!</string>
+    <string name="hello_land_world" translatable="false">Hello Lend world</string>
+</resources>
