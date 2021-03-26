@@ -8,7 +8,7 @@ import android.widget.TextView
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_movie_details)
+        setContentView(R.layout.activity_movie_details_sec)
 
 //        //инициализация переменной кнопки перехода
 //        val textView:TextView = findViewById(R.id.first_activity_text_view)
