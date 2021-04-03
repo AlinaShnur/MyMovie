@@ -4,320 +4,255 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/backgroundColor">
-
+        android:layout_height="wrap_content"
+        android:background="@color/background_Color">
     <ImageView
-        android:id="@+id/img_back"
+        android:id="@+id/img_background"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
         android:src="@drawable/orig"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </ImageView>
-
+        app:layout_constraintTop_toTopOf="parent"/>
     <View
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/gradient">
-
-    </View>
-
+        android:layout_height="0dp"
+        android:background="@drawable/gradient"
+        app:layout_constraintStart_toStartOf="@id/img_background"
+        app:layout_constraintEnd_toEndOf="@id/img_background"
+        app:layout_constraintTop_toTopOf="@id/img_background"
+        app:layout_constraintBottom_toBottomOf="@id/img_background"/>
     <TextView
+        android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintWidth_percent="0.25"
-        android:layout_marginBottom="160dp"
+        android:layout_marginTop="60dp"
         android:drawableStart="@drawable/ic_path"
         android:drawablePadding="8dp"
-        android:text="Back"
-        android:textColor="@color/forBack"
+        android:text="@string/back_text_View"
+        android:textColor="@color/for_Back"
         android:textSize="12dp"
-        app:layout_constraintBottom_toBottomOf="@id/img_back"
-        app:layout_constraintStart_toStartOf="@id/img_back"
-        app:layout_constraintTop_toTopOf="@id/img_back">
-
-    </TextView>
-
+        app:layout_constraintStart_toStartOf="@id/img_background"
+        app:layout_constraintTop_toTopOf="@id/img_background"/>
     <TextView
-        android:id="@+id/text_13"
+        android:id="@+id/age_Limit_Text_View"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:text="13+"
+        android:text="@string/age_limit"
         android:textColor="@color/white"
         android:textSize="12dp"
-        app:layout_constraintEnd_toStartOf="@id/img_back"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img_back">
-
-    </TextView>
-
+        android:textStyle="bold"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@id/img_background"
+        app:layout_constraintTop_toBottomOf="@id/img_background"/>
     <TextView
         android:id="@+id/name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:gravity="left"
-        android:text="Avengers: End Game"
-        android:textColor="@color/textCol"
+        android:text="@string/name_of_film"
+        android:textColor="@color/text_Col"
         android:textSize="40dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintLeft_toLeftOf="@id/text_13"
-        app:layout_constraintRight_toLeftOf="@id/text_13"
-        app:layout_constraintStart_toStartOf="@id/text_13"
-        app:layout_constraintTop_toBottomOf="@id/text_13"
-        app:layout_constraintWidth_percent="0.6">
-
-    </TextView>
-
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/age_Limit_Text_View"
+        app:layout_constraintTop_toBottomOf="@id/age_Limit_Text_View"
+        app:layout_constraintWidth_percent="0.6"/>
     <TextView
-        android:id="@+id/action"
-        android:layout_width="wrap_content"
+        android:id="@+id/film_genre"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Action, Adventure, Fantasy"
-        android:textColor="@color/actionCol"
+        android:text="@string/film_genre"
+        android:textColor="@color/action_Col"
         android:textSize="14dp"
         android:layout_marginTop="4dp"
-        app:layout_constraintStart_toStartOf="@id/name"
-        app:layout_constraintTop_toBottomOf="@id/name">
-
-    </TextView>
-
+        app:layout_constraintStart_toStartOf="@id/img_background"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintEnd_toEndOf="@id/description"/>
     <ImageView
-        android:id="@+id/firstStar"
+        android:id="@+id/first_Star"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingRight="2dp"
+        android:layout_marginEnd="2dp"
         android:src="@drawable/ic_star_icon"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="@id/reviews"
-        app:layout_constraintEnd_toStartOf="@id/secondStar"
-        app:layout_constraintStart_toStartOf="@id/name"
-        app:layout_constraintTop_toBottomOf="@id/action">
-
-    </ImageView>
-
+        app:layout_constraintStart_toStartOf="@id/img_background"
+        app:layout_constraintTop_toBottomOf="@id/film_genre"/>
     <ImageView
-        android:id="@+id/secondStar"
+        android:id="@+id/second_Star"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingRight="2dp"
+        android:layout_marginEnd="2dp"
         android:src="@drawable/ic_star_icon"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="@id/reviews"
-        app:layout_constraintEnd_toStartOf="@id/secondStar"
-        app:layout_constraintStart_toEndOf="@id/firstStar"
-        app:layout_constraintTop_toBottomOf="@id/action">
-
-    </ImageView>
-
+        app:layout_constraintStart_toEndOf="@id/first_Star"
+        app:layout_constraintTop_toBottomOf="@id/film_genre"/>
     <ImageView
-        android:id="@+id/thirdStar"
+        android:id="@+id/third_Star"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingRight="2dp"
+        android:layout_marginEnd="2dp"
         android:src="@drawable/ic_star_icon"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="@id/reviews"
-        app:layout_constraintEnd_toStartOf="@id/fourthStar"
-        app:layout_constraintStart_toEndOf="@id/secondStar"
-        app:layout_constraintTop_toBottomOf="@id/action">
-
-    </ImageView>
-
+        app:layout_constraintStart_toEndOf="@id/second_Star"
+        app:layout_constraintTop_toBottomOf="@id/film_genre"/>
     <ImageView
-        android:id="@+id/fourthStar"
+        android:id="@+id/fourth_Star"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingRight="2dp"
+        android:layout_marginEnd="2dp"
         android:src="@drawable/ic_star_icon"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="@id/reviews"
-        app:layout_constraintEnd_toStartOf="@id/fifthStar"
-        app:layout_constraintStart_toEndOf="@id/thirdStar"
-        app:layout_constraintTop_toBottomOf="@id/action">
-
-    </ImageView>
-
+        app:layout_constraintStart_toEndOf="@id/third_Star"
+        app:layout_constraintTop_toBottomOf="@id/film_genre"/>
     <ImageView
-        android:id="@+id/fifthStar"
+        android:id="@+id/fifth_Star"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingRight="2dp"
+        android:layout_marginEnd="2dp"
         android:src="@drawable/ic_star_icon"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="@id/reviews"
-        app:layout_constraintEnd_toStartOf="@id/reviews"
-        app:layout_constraintStart_toEndOf="@id/fourthStar"
-        app:layout_constraintTop_toBottomOf="@id/action"
-        app:tint="@color/tintCol">
-
-    </ImageView>
-
+        app:layout_constraintStart_toEndOf="@id/fourth_Star"
+        app:layout_constraintTop_toBottomOf="@id/film_genre"
+        app:tint="@color/tint_Col"/>
     <TextView
         android:id="@+id/reviews"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="125 Reviews"
-        android:textColor="@color/tintCol"
+        android:text="@string/feedback_rate"
+        android:textColor="@color/tint_Col"
         android:textSize="14dp"
         android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="@id/fifthStar"
-        app:layout_constraintStart_toEndOf="@id/fifthStar"
-        app:layout_constraintTop_toBottomOf="@id/action">
-
-    </TextView>
-
+        app:layout_constraintStart_toEndOf="@id/fifth_Star"
+        app:layout_constraintTop_toBottomOf="@id/film_genre"/>
     <TextView
         android:id="@+id/storyline"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:layout_marginBottom="4dp"
-        android:gravity="center"
-        android:text="Storyline"
-        android:textColor="@color/textCol"
+        android:text="@string/storyline"
+        android:textColor="@color/text_Col"
+        android:textStyle="bold"
         android:textSize="14dp"
-        app:layout_constraintStart_toStartOf="@id/firstStar"
-        app:layout_constraintTop_toBottomOf="@id/action">
-
-    </TextView>
-
+        app:layout_constraintStart_toStartOf="@id/img_background"
+        app:layout_constraintTop_toBottomOf="@id/film_genre"
+        app:layout_constraintEnd_toEndOf="@id/film_genre"/>
     <TextView
         android:id="@+id/description"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-
-        android:text="After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe."
-        android:textColor="@color/textColOpacity"
+        android:text="@string/film_description"
+        android:textColor="@color/text_Col_Opacity"
         android:textSize="14dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="4dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_editor_absoluteY="212dp"
+        app:layout_editor_absoluteX="212dp"
         app:layout_constraintStart_toStartOf="@id/storyline"
-        app:layout_constraintTop_toBottomOf="@id/action"
-        app:layout_constraintWidth_percent="0.9">
-
-    </TextView>
+        app:layout_constraintTop_toBottomOf="@id/storyline"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        />
     <TextView
-        android:id="@+id/castTextView"
-        android:layout_width="match_parent"
+        android:id="@+id/cast_Text_View"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Cast"
+        android:text="@string/cast"
         android:textColor="@color/white"
+        android:textStyle="bold"
         android:textSize="14dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="116dp"
-        android:paddingBottom="10dp"
-        android:layout_marginTop="128dp"
-        app:layout_constraintStart_toStartOf="@id/description"
+        android:paddingBottom="7dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="@id/description"
-        app:layout_constraintTop_toBottomOf="@id/storyline">
-
-    </TextView>
+        app:layout_constraintStart_toStartOf="@id/img_background"
+        app:layout_constraintTop_toBottomOf="@id/description"/>
     <ImageView
-        android:id="@+id/imgOne"
+        android:id="@+id/img_One"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintWidth_percent="0.25"
-        android:src="@drawable/imgone"
-        android:layout_marginTop="159dp"
-        app:layout_constraintStart_toStartOf="@id/castTextView"
-        app:layout_constraintTop_toBottomOf="@id/storyline">
-
-    </ImageView>
+        android:src="@drawable/img_one"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toStartOf="@id/cast_Text_View"
+        app:layout_constraintTop_toBottomOf="@id/cast_Text_View"/>
     <ImageView
-        android:id="@+id/imgTwo"
+        android:id="@+id/img_Two"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/imgtwo"
+        android:src="@drawable/img_two"
         app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintStart_toEndOf="@id/imgOne"
-        app:layout_constraintTop_toTopOf="@id/imgOne"
-        app:layout_constraintEnd_toStartOf="@id/imgThree">
-
-    </ImageView>
+        app:layout_constraintStart_toEndOf="@id/img_One"
+        app:layout_constraintTop_toTopOf="@id/img_One"
+        app:layout_constraintEnd_toStartOf="@id/img_Three"/>
     <ImageView
-        android:id="@+id/imgThree"
+        android:id="@+id/img_Three"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/imgthree"
+        android:src="@drawable/img_three"
         app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintStart_toEndOf="@id/imgTwo"
-        app:layout_constraintTop_toTopOf="@id/imgOne"
-        app:layout_constraintEnd_toStartOf="@id/imgfore" >
-
-    </ImageView>
+        app:layout_constraintStart_toEndOf="@id/img_Two"
+        app:layout_constraintTop_toTopOf="@id/img_One"
+        app:layout_constraintEnd_toStartOf="@id/img_fore" />
     <ImageView
-        android:id="@+id/imgfore"
+        android:id="@+id/img_fore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/imgfore"
+        android:src="@drawable/img_fore"
         app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintTop_toTopOf="@id/imgOne"
-        app:layout_constraintEnd_toEndOf="@id/description">
-
-    </ImageView>
-
+        app:layout_constraintTop_toTopOf="@id/img_One"
+        app:layout_constraintEnd_toEndOf="@id/description"/>
     <TextView
-        android:id="@+id/infOne"
+        android:id="@+id/info_One"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Robert Downey Jr."
-        android:textColor="@color/textCol"
+        android:text="@string/one_name_act"
+        android:textColor="@color/act_name_Col"
         android:textSize="12dp"
-        android:gravity="start"
-        android:layout_marginTop="245dp"
-        app:layout_constraintEnd_toEndOf="@id/imgOne"
-        app:layout_constraintStart_toStartOf="@id/imgOne"
-        app:layout_constraintTop_toBottomOf="@id/storyline">
-
-    </TextView>
+        android:textStyle="bold"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="@id/img_One"
+        app:layout_constraintStart_toStartOf="@id/img_One"
+        app:layout_constraintTop_toBottomOf="@id/img_One"/>
     <TextView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="Chris  Evans"
-        android:textColor="@color/textCol"
+        android:text="@string/two_name_act"
+        android:textColor="@color/act_name_Col"
         android:textSize="12dp"
+        android:textStyle="bold"
         android:gravity="start"
-        app:layout_constraintEnd_toEndOf="@id/imgTwo"
-        app:layout_constraintBottom_toBottomOf="@id/infOne"
-        app:layout_constraintStart_toStartOf="@id/imgTwo"
-        app:layout_constraintTop_toTopOf="@id/infOne">
-
-    </TextView>
+        app:layout_constraintEnd_toEndOf="@id/img_Two"
+        app:layout_constraintBottom_toBottomOf="@id/info_One"
+        app:layout_constraintStart_toStartOf="@id/img_Two"
+        app:layout_constraintTop_toTopOf="@id/info_One"/>
     <TextView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="Mark  Ruffalo"
-        android:textColor="@color/textCol"
+        android:text="@string/three_name_act"
+        android:textColor="@color/act_name_Col"
         android:textSize="12dp"
-        app:layout_constraintStart_toStartOf="@id/imgThree"
-        app:layout_constraintTop_toTopOf="@id/infOne"
-        app:layout_constraintEnd_toEndOf="@id/imgThree"
-        app:layout_constraintBottom_toBottomOf="@id/infOne">
-
-    </TextView>
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/img_Three"
+        app:layout_constraintTop_toTopOf="@id/info_One"
+        app:layout_constraintEnd_toEndOf="@id/img_Three"
+        app:layout_constraintBottom_toBottomOf="@id/info_One"/>
     <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Chris Hemsworth"
-        android:textColor="@color/textCol"
+        android:text="@string/four_name_act"
+        android:textColor="@color/act_name_Col"
         android:textSize="12dp"
-        app:layout_constraintStart_toStartOf="@id/imgfore"
-        app:layout_constraintTop_toTopOf="@id/infOne"
-        app:layout_constraintEnd_toEndOf="@id/imgfore"
-        app:layout_constraintBottom_toBottomOf="@id/infOne">
-
-    </TextView>
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/img_fore"
+        app:layout_constraintTop_toTopOf="@id/info_One"
+        app:layout_constraintEnd_toEndOf="@id/img_fore"
+        app:layout_constraintBottom_toBottomOf="@id/info_One"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
 </ScrollView>
 

@@ -8,10 +8,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="backgroundColor">#191926</color>
-    <color name="textCol">#ECECEC</color>
-    <color name="textColOpacity">#BFECECEC</color>
-    <color name="forBack">#6D6D80</color>
-    <color name="actionCol">#FF3466</color>
-    <color name="tintCol">#6D6D80</color>
+    <color name="background_Color">#191926</color>
+    <color name="text_Col">#ECECEC</color>
+    <color name="text_Col_Opacity">#BFECECEC</color>
+    <color name="for_Back">#6D6D80</color>
+    <color name="action_Col">#FF3466</color>
+    <color name="tint_Col">#6D6D80</color>
+    <color name="act_name_Col">#D8D8D8</color>
 </resources>
