@@ -11,10 +11,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val textView: TextView = findViewById(R.id.first_text_view)
-        textView.setOnClickListener{ moveToNextScreen() }
+        textView.setOnClickListener { moveToNextScreen() }
     }
 
-    private fun moveToNextScreen(){
+    private fun moveToNextScreen() {
         val intent = Intent(this, MovieDetailsActivity::class.java)
 
         startActivity(intent)
