@@ -4,7 +4,7 @@
     <string name="hello_land_world" translatable="false">Hello Land World</string>
     <string name="back_text_view" translatable="false">Back</string>
     <string name="age_limit" translatable="false">13+</string>
-    <string name="name_of_film" translatable="false">Avengers: "\n"End Game</string>
+    <string name="name_of_film" translatable="false">Avengers:\nEnd Game</string>
     <string name="film_genre" translatable="false">Action, Adventure, Fantasy</string>
     <string name="feedback_rate" translatable="false">125 Reviews</string>
     <string name="storyline" translatable="false">Storyline</string>
