@@ -19,7 +19,7 @@
 
         <View
             android:id="@+id/grad"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/info_gradient"
             app:layout_constraintBottom_toBottomOf="@id/image_view_background"
@@ -52,7 +52,7 @@
             android:fontFamily="@font/roboto_light"
             android:text="@string/back_text_view"
             android:textColor="@color/for_back"
-            android:textSize="12dp"
+            android:textSize="12sp"
             app:layout_constraintStart_toStartOf="@id/guideline_start"
             app:layout_constraintTop_toTopOf="@id/image_view_background" />
 
@@ -60,13 +60,13 @@
             android:id="@+id/age_limit_text_view"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_marginBottom="56dp"
+            android:layout_marginBottom="12dp"
             android:background="@drawable/age_limit_rectangle"
             android:fontFamily="@font/roboto_black"
             android:gravity="center"
             android:text="@string/age_limit"
             android:textColor="@color/white"
-            android:textSize="12dp"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/name"
             app:layout_constraintStart_toStartOf="@id/guideline_start" />
@@ -75,15 +75,14 @@
             android:id="@+id/name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="254dp"
             android:fontFamily="@font/roboto_black"
             android:text="@string/name_of_film"
             android:textColor="@color/text_color"
-            android:textSize="40dp"
+            android:textSize="40sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@id/guideline_end"
             app:layout_constraintStart_toStartOf="@id/guideline_start"
-            app:layout_constraintTop_toTopOf="@id/image_view_background" />
+            app:layout_constraintTop_toBottomOf="@id/image_view_background" />
 
         <TextView
             android:id="@+id/film_genre"
@@ -93,7 +92,7 @@
             android:fontFamily="@font/roboto_light"
             android:text="@string/film_genre"
             android:textColor="@color/film_genre_color"
-            android:textSize="14dp"
+            android:textSize="14sp"
             app:layout_constraintEnd_toStartOf="@id/guideline_end"
             app:layout_constraintStart_toStartOf="@id/guideline_start"
             app:layout_constraintTop_toBottomOf="@id/name" />
@@ -112,7 +111,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="3dp"
-            android:layout_marginEnd="3dp"
             android:src="@drawable/ic_star_icon"
             app:layout_constraintStart_toEndOf="@id/first_star"
             app:layout_constraintTop_toTopOf="@id/first_star" />
@@ -121,7 +119,7 @@
             android:id="@+id/third_star"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="3dp"
+            android:layout_marginStart="3dp"
             android:src="@drawable/ic_star_icon"
             app:layout_constraintStart_toEndOf="@id/second_star"
             app:layout_constraintTop_toTopOf="@id/first_star" />
@@ -130,7 +128,7 @@
             android:id="@+id/fourth_star"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="3dp"
+            android:layout_marginStart="3dp"
             android:src="@drawable/ic_star_icon"
             app:layout_constraintStart_toEndOf="@id/third_star"
             app:layout_constraintTop_toTopOf="@id/first_star" />
@@ -139,10 +137,12 @@
             android:id="@+id/fifth_star"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
             android:layout_marginEnd="8dp"
             android:src="@drawable/ic_star_icon"
             app:layout_constraintStart_toEndOf="@id/fourth_star"
             app:layout_constraintTop_toTopOf="@id/first_star"
+            app:layout_constraintEnd_toStartOf="@id/reviews"
             app:tint="@color/tint_color" />
 
         <TextView
@@ -152,7 +152,7 @@
             android:fontFamily="@font/roboto_black"
             android:text="@string/feedback_rate"
             android:textColor="@color/tint_color"
-            android:textSize="14dp"
+            android:textSize="14sp"
             app:layout_constraintEnd_toStartOf="@id/guideline_end"
             app:layout_constraintStart_toEndOf="@id/fifth_star"
             app:layout_constraintTop_toBottomOf="@id/film_genre" />
@@ -165,7 +165,7 @@
             android:fontFamily="@font/roboto_black"
             android:text="@string/storyline"
             android:textColor="@color/text_color"
-            android:textSize="14dp"
+            android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@id/guideline_end"
             app:layout_constraintStart_toEndOf="@id/guideline_start"
@@ -176,11 +176,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:fontFamily="@font/roboto_light"
             android:layout_marginBottom="6dp"
+            android:fontFamily="@font/roboto_light"
             android:text="@string/film_description"
             android:textColor="@color/text_color_opacity"
-            android:textSize="14dp"
+            android:textSize="14sp"
             app:layout_constraintEnd_toStartOf="@id/guideline_end"
             app:layout_constraintStart_toEndOf="@id/guideline_start"
             app:layout_constraintTop_toBottomOf="@id/storyline" />
@@ -193,7 +193,7 @@
             android:fontFamily="@font/roboto_black"
             android:text="@string/cast"
             android:textColor="@color/white"
-            android:textSize="14dp"
+            android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@id/guideline_end"
             app:layout_constraintStart_toEndOf="@id/guideline_start"
@@ -251,7 +251,7 @@
             android:fontFamily="@font/roboto_black"
             android:text="@string/one_name_act"
             android:textColor="@color/actor_name_color"
-            android:textSize="12dp"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@id/first_actor_image_view"
             app:layout_constraintStart_toStartOf="@id/first_actor_image_view"
@@ -263,7 +263,7 @@
             android:fontFamily="@font/roboto_black"
             android:text="@string/two_name_act"
             android:textColor="@color/actor_name_color"
-            android:textSize="12dp"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@id/second_actor_image_view"
             app:layout_constraintStart_toStartOf="@id/second_actor_image_view"
@@ -275,7 +275,7 @@
             android:fontFamily="@font/roboto_black"
             android:text="@string/three_name_act"
             android:textColor="@color/actor_name_color"
-            android:textSize="12dp"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@id/third_actor_image_view"
             app:layout_constraintStart_toStartOf="@id/third_actor_image_view"
@@ -287,7 +287,7 @@
             android:fontFamily="@font/roboto_black"
             android:text="@string/four_name_act"
             android:textColor="@color/actor_name_color"
-            android:textSize="12dp"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@id/fourth_actor_image_view"
             app:layout_constraintStart_toStartOf="@id/fourth_actor_image_view"
