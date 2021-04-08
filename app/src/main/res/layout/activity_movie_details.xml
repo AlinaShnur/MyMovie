@@ -80,9 +80,9 @@
             android:textColor="@color/text_color"
             android:textSize="40sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/image_view_background"
             app:layout_constraintEnd_toStartOf="@id/guideline_end"
-            app:layout_constraintStart_toStartOf="@id/guideline_start"
-            app:layout_constraintBottom_toBottomOf="@id/image_view_background" />
+            app:layout_constraintStart_toStartOf="@id/guideline_start" />
 
         <TextView
             android:id="@+id/film_genre"
@@ -147,11 +147,11 @@
             android:id="@+id/reviews"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:fontFamily="@font/roboto_black"
             android:text="@string/feedback_rate"
             android:textColor="@color/tint_color"
             android:textSize="14sp"
-            android:layout_marginStart="8dp"
             app:layout_constraintEnd_toStartOf="@id/guideline_end"
             app:layout_constraintStart_toEndOf="@id/fifth_star"
             app:layout_constraintTop_toBottomOf="@id/film_genre" />
