@@ -15,4 +15,8 @@
     <color name="film_genre_color">#FF3466</color>
     <color name="tint_color">#6D6D80</color>
     <color name="actor_name_color">#D8D8D8</color>
+
+    <color name="border_outer">#636375</color>
+    <color name="border_inner">#3B3B4D</color>
+    <color name="film_duration">#565665</color>
 </resources>
