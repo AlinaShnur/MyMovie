@@ -53,6 +53,7 @@
             android:layout_marginTop="2dp"
             android:layout_marginEnd="2dp"
             android:src="@drawable/movie"
+            android:onClick="onClickMoveToDetails"
             app:layout_constraintEnd_toEndOf="@id/movie_background_layout"
             app:layout_constraintStart_toStartOf="@id/movie_background_layout"
             app:layout_constraintTop_toTopOf="@id/movie_background_layout" />
@@ -104,6 +105,7 @@
             android:text="@string/film_genre_drama"
             android:textColor="@color/film_genre_color"
             android:textSize="8sp"
+            android:layout_marginEnd="6dp"
             app:layout_constraintBottom_toTopOf="@id/reviews"
             app:layout_constraintEnd_toEndOf="@id/reviews"
             app:layout_constraintStart_toStartOf="@id/first_star" />

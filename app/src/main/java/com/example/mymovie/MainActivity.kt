@@ -3,6 +3,7 @@ package com.example.mymovie
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
@@ -16,27 +17,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
         supportFragmentManager.beginTransaction()
                 .add(R.id.main_container, FragmentMoviesList())
-//                .add(R.id.main_container,FragmentMoviesList())
-//                .hide(FragmentMoviesList())
-//                .show(FragmentMoviesDetails())
+                .addToBackStack(null)
                 .commit()
-
-        val textView: TextView = findViewById(R.id.movies_list_text_view)
-        textView.setOnClickListener { moveToNextScreen()
-        }
-
     }
-
-
-
-        private fun moveToNextScreen() {
-             val intent = Intent(this, MovieDetailsActivity::class.java)
-
-             startActivity(intent)
-        }
-
+    fun onClickMoveToDetails(view: View) {
+        supportFragmentManager.beginTransaction()
+                .add(R.id.main_container, FragmentMoviesDetails())
+                .addToBackStack(null)
+                .commit()
     }
+}
