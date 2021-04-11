@@ -9,8 +9,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
 
 //  Add FragmentMoviesList to the MainActivity
-//  create the transaction with transition of navigation to FragmentMoviesDetails
-//  by click on Card with Film
+//  create the transaction with transition of navigation to FragmentMoviesDetails by click on Card with Film
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
