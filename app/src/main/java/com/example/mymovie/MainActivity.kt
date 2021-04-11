@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
                 .addToBackStack(null)
                 .commit()
     }
+
     fun onClickMoveToDetails(view: View) {
         supportFragmentManager.beginTransaction()
                 .add(R.id.main_container, FragmentMoviesDetails())
