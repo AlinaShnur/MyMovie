@@ -16,6 +16,6 @@
     <string name="four_name_act" translatable="false">Chris Hemsworth</string>
     <string name="movies_list" translatable="false">Movies list</string>
     <string name="film_genre_drama" translatable="false">Action, Adventure, Drama</string>
-    <string name="film_duration" translatable="false">137 MIN</string>
+    <string name="film_duration" translatable="false">137 min</string>
     <string name="name_in_list" translatable="false">Avengers: End Game</string>
 </resources>

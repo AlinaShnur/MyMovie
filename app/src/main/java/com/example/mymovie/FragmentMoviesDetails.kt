@@ -11,10 +11,11 @@ import org.w3c.dom.Text
 
 //  inflate fragment_movies_details.xml in it
 
-class FragmentMoviesDetails : Fragment() {
-    override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
-    ): View? = inflater.inflate(R.layout.fragment_movies_details, container, false)
+class FragmentMoviesDetails : Fragment(R.layout.fragment_movies_details) {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+    }
 }
