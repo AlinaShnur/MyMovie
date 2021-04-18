@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:layout_width="170dp"
-    android:layout_height="296dp"
-    card_view:cardCornerRadius="8dp"
-    card_view:cardElevation="4dp">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="8dp"
+    android:elevation="4dp"
+    app:cardBackgroundColor="@color/background_color">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/card_gradient">
+        android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_start"
@@ -29,13 +30,11 @@
 
         <ImageView
             android:id="@+id/movie_background_image_view"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:onClick="onClickMoveToDetails"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.84"
             android:src="@drawable/movie"
-            app:layout_constraintTop_toTopOf="@id/card_view"
-            card_view:layout_constraintEnd_toEndOf="@id/card_view"
-            card_view:layout_constraintStart_toStartOf="@id/card_view" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <View
             android:id="@+id/gradient_view"
@@ -87,48 +86,52 @@
 
         <ImageView
             android:id="@+id/first_star"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_star_icon_smaller"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:src="@drawable/ic_star_icon"
             app:layout_constraintBottom_toBottomOf="@id/reviews"
             app:layout_constraintStart_toStartOf="@id/guideline_start"
             app:layout_constraintTop_toTopOf="@id/reviews" />
 
         <ImageView
             android:id="@+id/second_star"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="8dp"
+            android:layout_height="0dp"
             android:layout_marginStart="2dp"
-            android:src="@drawable/ic_star_icon_smaller"
+            android:src="@drawable/ic_star_icon"
             app:layout_constraintStart_toEndOf="@id/first_star"
-            app:layout_constraintTop_toTopOf="@id/first_star" />
+            app:layout_constraintTop_toTopOf="@id/first_star"
+            app:layout_constraintBottom_toBottomOf="@id/first_star"/>
 
         <ImageView
             android:id="@+id/third_star"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="8dp"
+            android:layout_height="0dp"
             android:layout_marginStart="2dp"
-            android:src="@drawable/ic_star_icon_smaller"
+            android:src="@drawable/ic_star_icon"
             app:layout_constraintStart_toEndOf="@id/second_star"
-            app:layout_constraintTop_toTopOf="@id/first_star" />
+            app:layout_constraintTop_toTopOf="@id/first_star"
+            app:layout_constraintBottom_toBottomOf="@id/first_star"/>
 
         <ImageView
             android:id="@+id/fourth_star"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="8dp"
+            android:layout_height="0dp"
             android:layout_marginStart="2dp"
-            android:src="@drawable/ic_star_icon_smaller"
+            android:src="@drawable/ic_star_icon"
             app:layout_constraintStart_toEndOf="@id/third_star"
-            app:layout_constraintTop_toTopOf="@id/first_star" />
+            app:layout_constraintTop_toTopOf="@id/first_star"
+            app:layout_constraintBottom_toBottomOf="@id/first_star"/>
 
         <ImageView
             android:id="@+id/fifth_star"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="8dp"
+            android:layout_height="0dp"
             android:layout_marginStart="2dp"
-            android:src="@drawable/ic_star_icon_smaller"
+            android:src="@drawable/ic_star_icon"
             app:layout_constraintStart_toEndOf="@id/fourth_star"
             app:layout_constraintTop_toTopOf="@id/first_star"
+            app:layout_constraintBottom_toBottomOf="@id/first_star"
             app:tint="@color/tint_color" />
 
         <TextView
@@ -174,4 +177,4 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.cardview.widget.CardView>
+</com.google.android.material.card.MaterialCardView>

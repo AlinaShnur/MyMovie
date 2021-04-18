@@ -7,26 +7,35 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
+import com.example.mymovie.databinding.ActivityMainBinding
+import com.example.mymovie.databinding.CardViewBinding
+import com.example.mymovie.databinding.FragmentMoviesDetailsBinding
+import com.example.mymovie.databinding.FragmentMoviesListBinding
 
-//  Add FragmentMoviesList to the MainActivity
-//  create the transaction with transition of navigation to FragmentMoviesDetails by click on Card with Film
-
-class MainActivity : AppCompatActivity(R.layout.activity_main) {
-
+class MainActivity : AppCompatActivity(R.layout.activity_main), FragmentMoviesListClickListener, BackToListClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
         if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                    .replace(R.id.main_container, FragmentMoviesList())
-                    .addToBackStack(null)
-                    .commit()
+            addMovieList()
         }
     }
-    fun onClickMoveToDetails(view: View) {
+    private fun addMovieList() {
+        supportFragmentManager.beginTransaction()
+                .replace(R.id.main_container, FragmentMoviesList())
+                .addToBackStack(null)
+                .commit()
+    }
+    override fun toCardViewClicked() {
         supportFragmentManager.beginTransaction()
                 .replace(R.id.main_container, FragmentMoviesDetails())
                 .addToBackStack(null)
                 .commit()
     }
+    override fun backToListClicked() {
+        supportFragmentManager.beginTransaction()
+                .replace(R.id.main_container, FragmentMoviesList())
+                .addToBackStack(null)
+                .commit()
+    }
 }
+
