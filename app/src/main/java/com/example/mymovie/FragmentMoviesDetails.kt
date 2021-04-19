@@ -9,25 +9,13 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 
 class FragmentMoviesDetails : Fragment(R.layout.fragment_movies_details) {
-    private var backMoviesDetailsClickListener: BackToListClickListener? = null
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?):
-            View? {
-        val view = inflater.inflate(R.layout.fragment_movies_details, container, false)
-        view?.findViewById<TextView>(R.id.back_text_view)?.apply {
-            setOnClickListener {
-                backMoviesDetailsClickListener?.backToListClicked()
-            }
+    private val backMoviesDetailsClickListener: BackToListClickListener? get() = (activity as? BackToListClickListener)
+    private lateinit var backTextView: TextView
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        backTextView = view.findViewById(R.id.back_text_view)
+        backTextView.setOnClickListener {
+            backMoviesDetailsClickListener?.onBackPressed()
         }
-        return view
-    }
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        if (context is BackToListClickListener) {
-            backMoviesDetailsClickListener = context
-        }
-    }
-    override fun onDetach() {
-        super.onDetach()
-        backMoviesDetailsClickListener = null
     }
 }
