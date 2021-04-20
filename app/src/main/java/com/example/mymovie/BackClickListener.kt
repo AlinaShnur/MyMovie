@@ -1,5 +1,4 @@
 package com.example.mymovie
-
-interface BackToListClickListener {
+interface BackClickListener {
     fun onBackPressed()
 }
