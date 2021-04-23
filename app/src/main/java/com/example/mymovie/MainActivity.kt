@@ -9,14 +9,11 @@ class MainActivity :
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (savedInstanceState == null) {
-            addMovieList()
+            supportFragmentManager.beginTransaction()
+                    .replace(R.id.main_container, FragmentMoviesList())
+                    .addToBackStack(null)
+                    .commit()
         }
-    }
-    private fun addMovieList() {
-        supportFragmentManager.beginTransaction()
-                .replace(R.id.main_container, FragmentMoviesList())
-                .addToBackStack(null)
-                .commit()
     }
     override fun toCardViewClicked() {
         supportFragmentManager.beginTransaction()
@@ -25,6 +22,8 @@ class MainActivity :
                 .commit()
     }
 }
+// дженерик функцию (пример с мапом
+// )
 
 
 
