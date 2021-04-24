@@ -10,8 +10,6 @@ class FragmentMoviesList : Fragment(R.layout.fragment_movies_list) {
 
     private val fragmentMoviesListClickListener: FragmentMoviesListClickListener? get() = (activity as? FragmentMoviesListClickListener)
 
-//    lateinit var cardView: View
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val cardView = view.findViewById<View>(R.id.card_view)

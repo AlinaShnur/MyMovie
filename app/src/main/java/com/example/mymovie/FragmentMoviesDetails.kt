@@ -4,8 +4,6 @@ import android.view.View
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 class FragmentMoviesDetails : Fragment(R.layout.fragment_movies_details) {
-//    private val backMoviesDetailsClickListener: BackClickListener? get() = (activity as? BackClickListener)
-//    private var backTextView: TextView? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
