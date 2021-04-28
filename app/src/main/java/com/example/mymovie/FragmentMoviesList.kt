@@ -6,15 +6,21 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import by.kirich1409.viewbindingdelegate.viewBinding
+import com.example.mymovie.databinding.FragmentMoviesListBinding
+
 class FragmentMoviesList : Fragment(R.layout.fragment_movies_list) {
 
-    private val fragmentMoviesListClickListener: FragmentMoviesListClickListener? get() = (activity as? FragmentMoviesListClickListener)
+    private val binding by viewBinding(FragmentMoviesListBinding::bind)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val cardView = view.findViewById<View>(R.id.card_view)
-        cardView.setOnClickListener {
-            fragmentMoviesListClickListener?.toCardViewClicked()
+        binding.movieCardViewInclude.cardView.setOnClickListener {
+            onCardPressed()
         }
+    }
+
+    private fun onCardPressed() {
+        router?.navigateTo(Screens.MovieDetails())
     }
 }
