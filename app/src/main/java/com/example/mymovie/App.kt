@@ -9,7 +9,7 @@ import com.github.terrakok.cicerone.Router
 
 class App: Application() {
     private val cicerone: Cicerone<Router> = Cicerone.create()
-    val router get() = cicerone.router
+    val router: Router get() = cicerone.router
     val navigatorHolder get() = cicerone.getNavigatorHolder()
 }
 val Activity.router: Router get() = (application as App).router
