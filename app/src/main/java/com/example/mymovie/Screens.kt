@@ -8,7 +8,7 @@ object Screens {
     fun MovieList() = FragmentScreen {
         FragmentMoviesList()
     }
-    fun MovieDetails(): FragmentScreen = FragmentScreen {
+    fun MovieDetails() = FragmentScreen {
         FragmentMoviesDetails()
     }
 }
